@@ -13,6 +13,7 @@
 		D34E4421278028A4006A22D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34E441F278028A4006A22D9 /* Main.storyboard */; };
 		D34E4423278028A5006A22D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34E4422278028A5006A22D9 /* Assets.xcassets */; };
 		D34E4426278028A5006A22D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34E4424278028A5006A22D9 /* LaunchScreen.storyboard */; };
+		D34E442E278085C7006A22D9 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34E442D278085C7006A22D9 /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D34E4422278028A5006A22D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D34E4425278028A5006A22D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D34E4427278028A5006A22D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D34E442D278085C7006A22D9 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				D34E4419278028A4006A22D9 /* AppDelegate.swift */,
 				D34E441B278028A4006A22D9 /* SceneDelegate.swift */,
 				D34E441D278028A4006A22D9 /* ViewController.swift */,
+				D34E442D278085C7006A22D9 /* UIImageExtension.swift */,
 				D34E441F278028A4006A22D9 /* Main.storyboard */,
 				D34E4422278028A5006A22D9 /* Assets.xcassets */,
 				D34E4424278028A5006A22D9 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				D34E441E278028A4006A22D9 /* ViewController.swift in Sources */,
 				D34E441A278028A4006A22D9 /* AppDelegate.swift in Sources */,
 				D34E441C278028A4006A22D9 /* SceneDelegate.swift in Sources */,
+				D34E442E278085C7006A22D9 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +296,8 @@
 				DEVELOPMENT_TEAM = R2Y875XTFK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyCamera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Access to camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Save to photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,6 +326,8 @@
 				DEVELOPMENT_TEAM = R2Y875XTFK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyCamera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Access to camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Save to photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
