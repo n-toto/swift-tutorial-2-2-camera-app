@@ -14,6 +14,7 @@
 		D34E4423278028A5006A22D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D34E4422278028A5006A22D9 /* Assets.xcassets */; };
 		D34E4426278028A5006A22D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34E4424278028A5006A22D9 /* LaunchScreen.storyboard */; };
 		D34E442E278085C7006A22D9 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34E442D278085C7006A22D9 /* UIImageExtension.swift */; };
+		D34E44302780898C006A22D9 /* EffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34E442F2780898C006A22D9 /* EffectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D34E4425278028A5006A22D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D34E4427278028A5006A22D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D34E442D278085C7006A22D9 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		D34E442F2780898C006A22D9 /* EffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		D34E440D278028A4006A22D9 = {
 			isa = PBXGroup;
 			children = (
+				D34E442F2780898C006A22D9 /* EffectViewController.swift */,
 				D34E4418278028A4006A22D9 /* MyCamera */,
 				D34E4417278028A4006A22D9 /* Products */,
 			);
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34E44302780898C006A22D9 /* EffectViewController.swift in Sources */,
 				D34E441E278028A4006A22D9 /* ViewController.swift in Sources */,
 				D34E441A278028A4006A22D9 /* AppDelegate.swift in Sources */,
 				D34E441C278028A4006A22D9 /* SceneDelegate.swift in Sources */,

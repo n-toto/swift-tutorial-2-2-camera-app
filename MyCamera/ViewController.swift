@@ -53,18 +53,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
      
     }
     
-    @IBAction func shareButtonAction(_ sender: Any) {
-        if let shareImage = pictureImage.image?.resize() {
-            let shareItems = [shareImage]
-            let controller = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
-            controller.popoverPresentationController?.sourceView = view
-            present(controller, animated: true, completion: nil)
-        }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        captureImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        dismiss(animated: true, completion: {
+            self.performSegue(withIdentifier: "showEffectView", sender: nil)
+        })
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        pictureImage.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        dismiss(animated: true, completion: nil)
+    var captureImage: UIImage?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextViewController = segue.destination as? EffectViewController{
+            nextViewController.originalImage = captureImage
+        }
     }
     
 }

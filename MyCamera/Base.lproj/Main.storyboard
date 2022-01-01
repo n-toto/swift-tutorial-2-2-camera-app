@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MlV-kC-osq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="668"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="728"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doM-gA-mro">
-                                <rect key="frame" x="16" y="742" width="382" height="30"/>
+                                <rect key="frame" x="16" y="802" width="382" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="R4f-Dd-yLl"/>
                                 </constraints>
@@ -35,45 +35,117 @@
                                     <action selector="cameraButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hdr-vQ-JEO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tm9-bA-nwm">
-                                <rect key="frame" x="16" y="802" width="382" height="30"/>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MlV-kC-osq" secondAttribute="trailing" id="8kb-N6-0oQ"/>
+                            <constraint firstItem="MlV-kC-osq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Axn-vE-hGb"/>
+                            <constraint firstItem="doM-gA-mro" firstAttribute="top" secondItem="MlV-kC-osq" secondAttribute="bottom" constant="30" id="EKj-5u-FMb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="doM-gA-mro" secondAttribute="trailing" constant="16" id="bPT-jK-sQg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="doM-gA-mro" secondAttribute="bottom" constant="30" id="lRp-hd-OCT"/>
+                            <constraint firstItem="MlV-kC-osq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lmZ-V9-ZpL"/>
+                            <constraint firstItem="doM-gA-mro" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oUD-ym-Uf4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pictureImage" destination="MlV-kC-osq" id="oe4-E0-WpL"/>
+                        <segue destination="IZX-Oo-lNx" kind="show" identifier="showEffectView" id="VlY-XK-MbU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="82.366071428571431"/>
+        </scene>
+        <!--Effect View Controller-->
+        <scene sceneID="hOq-D2-HnY">
+            <objects>
+                <viewController id="IZX-Oo-lNx" customClass="EffectViewController" customModule="MyCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AQG-Gf-TAD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xBE-oR-5Wr">
+                                <rect key="frame" x="16" y="0.0" width="382" height="598"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jd-ZH-Fi9">
+                                <rect key="frame" x="16" y="628" width="382" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="0RM-Vn-VvS"/>
+                                    <constraint firstAttribute="height" constant="30" id="y4g-H1-9P8"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="SNSに投稿する">
+                                <buttonConfiguration key="configuration" style="plain" title="エフェクト">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="shareButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NVt-UU-mIL"/>
+                                    <action selector="cameraButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wkT-Xe-XuL"/>
+                                    <action selector="effectButtonAction:" destination="IZX-Oo-lNx" eventType="touchUpInside" id="tAD-ed-0QU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTq-0a-1Yd">
+                                <rect key="frame" x="16" y="688" width="382" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Zas-Q0-KLq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="シェア">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cameraButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Iw-LP-Pp2"/>
+                                    <action selector="shareButtonAction:" destination="IZX-Oo-lNx" eventType="touchUpInside" id="qCc-NX-8JM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHy-yA-dir">
+                                <rect key="frame" x="16" y="748" width="382" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="REL-Bf-U2n"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="閉じる">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cameraButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2kv-xU-LOi"/>
+                                    <action selector="closeButtonAction:" destination="IZX-Oo-lNx" eventType="touchUpInside" id="zuU-iw-MhL"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="CiP-HB-bif"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tm9-bA-nwm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="272-Cr-iL0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MlV-kC-osq" secondAttribute="trailing" id="8kb-N6-0oQ"/>
-                            <constraint firstItem="MlV-kC-osq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Axn-vE-hGb"/>
-                            <constraint firstItem="doM-gA-mro" firstAttribute="top" secondItem="MlV-kC-osq" secondAttribute="bottom" constant="30" id="EKj-5u-FMb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tm9-bA-nwm" secondAttribute="trailing" constant="16" id="aZr-o3-UA1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="doM-gA-mro" secondAttribute="trailing" constant="16" id="bPT-jK-sQg"/>
-                            <constraint firstItem="MlV-kC-osq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lmZ-V9-ZpL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tm9-bA-nwm" secondAttribute="bottom" constant="30" id="n6p-Pf-R2w"/>
-                            <constraint firstItem="doM-gA-mro" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oUD-ym-Uf4"/>
-                            <constraint firstItem="tm9-bA-nwm" firstAttribute="top" secondItem="doM-gA-mro" secondAttribute="bottom" constant="30" id="zJq-nV-269"/>
+                            <constraint firstItem="CiP-HB-bif" firstAttribute="trailing" secondItem="9jd-ZH-Fi9" secondAttribute="trailing" constant="16" id="6YA-qt-A30"/>
+                            <constraint firstItem="CiP-HB-bif" firstAttribute="trailing" secondItem="FHy-yA-dir" secondAttribute="trailing" constant="16" id="AEt-W1-Oqx"/>
+                            <constraint firstItem="ZTq-0a-1Yd" firstAttribute="top" secondItem="9jd-ZH-Fi9" secondAttribute="bottom" constant="30" id="AzT-YY-QUq"/>
+                            <constraint firstItem="ZTq-0a-1Yd" firstAttribute="leading" secondItem="CiP-HB-bif" secondAttribute="leading" constant="16" id="NMa-Cq-VkI"/>
+                            <constraint firstItem="FHy-yA-dir" firstAttribute="top" secondItem="ZTq-0a-1Yd" secondAttribute="bottom" constant="30" id="S6O-BP-VQU"/>
+                            <constraint firstItem="xBE-oR-5Wr" firstAttribute="top" secondItem="CiP-HB-bif" secondAttribute="top" id="U2H-qz-12G"/>
+                            <constraint firstItem="9jd-ZH-Fi9" firstAttribute="top" secondItem="xBE-oR-5Wr" secondAttribute="bottom" constant="30" id="Y9l-0C-jiv"/>
+                            <constraint firstItem="CiP-HB-bif" firstAttribute="trailing" secondItem="xBE-oR-5Wr" secondAttribute="trailing" constant="16" id="ifp-vs-hJc"/>
+                            <constraint firstItem="9jd-ZH-Fi9" firstAttribute="leading" secondItem="CiP-HB-bif" secondAttribute="leading" constant="16" id="leY-80-h88"/>
+                            <constraint firstItem="xBE-oR-5Wr" firstAttribute="leading" secondItem="CiP-HB-bif" secondAttribute="leading" constant="16" id="lz0-qo-Hms"/>
+                            <constraint firstItem="CiP-HB-bif" firstAttribute="trailing" secondItem="ZTq-0a-1Yd" secondAttribute="trailing" constant="16" id="oDB-FS-os6"/>
+                            <constraint firstItem="CiP-HB-bif" firstAttribute="bottom" secondItem="FHy-yA-dir" secondAttribute="bottom" constant="30" id="r6K-sz-6fu"/>
+                            <constraint firstItem="FHy-yA-dir" firstAttribute="leading" secondItem="CiP-HB-bif" secondAttribute="leading" constant="16" id="yBS-Kj-DJH"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hBF-sD-LYO"/>
                     <connections>
-                        <outlet property="pictureImage" destination="MlV-kC-osq" id="oe4-E0-WpL"/>
+                        <outlet property="effectImage" destination="xBE-oR-5Wr" id="ICW-G8-uYh"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eeq-dJ-01C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="82.366071428571431"/>
+            <point key="canvasLocation" x="862" y="82"/>
         </scene>
     </scenes>
     <resources>
